@@ -20,6 +20,7 @@ function portfolioAssetResolver() {
 }
 
 export default defineConfig({
+  base: "/AppPorftolio/",
   plugins: [
     portfolioAssetResolver(),
     react(),
