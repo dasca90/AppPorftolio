@@ -9,8 +9,8 @@ export function CV() {
   const [ref, isInView] = useInView({ threshold: 0.3 });
 
   const handleCvRequest = () => {
-    const subject = encodeURIComponent("CV request - Alexandru Dascalescu");
-    const body = encodeURIComponent("Hi Alexandru,\n\nI would like to request your latest CV.\n\nThank you.");
+    const subject = encodeURIComponent("Solicitare CV - Alexandru Dascalescu");
+    const body = encodeURIComponent("Salut Alexandru,\n\nAs dori sa primesc cel mai recent CV.\n\nMultumesc.");
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   };
 
@@ -41,11 +41,12 @@ export function CV() {
               </motion.div>
 
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
-                CV Available on Request
+                CV disponibil la cerere
               </h2>
 
               <p className="text-lg text-zinc-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-                Request the latest CV for a concise overview of my CAD, MEP, solar PV and AI automation project experience.
+                Solicita cel mai recent CV pentru un rezumat clar al experientei mele in proiectare CAD, instalatii MEP,
+                sisteme fotovoltaice si proiecte de AI Automation.
               </p>
 
               <Button
@@ -54,11 +55,11 @@ export function CV() {
                 className="bg-white text-black hover:bg-zinc-200 transition-all duration-300 group"
               >
                 <Mail className="mr-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
-                Request CV by Email
+                Solicita CV pe email
               </Button>
 
               <p className="text-sm text-zinc-500 mt-6">
-                Latest positioning updated April 2026
+                Pozitionare actualizata in aprilie 2026
               </p>
             </div>
           </div>

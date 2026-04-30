@@ -23,13 +23,13 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ type: "spring", duration: 0.5 }}
-          className="relative w-full max-w-4xl bg-zinc-900 rounded-2xl border border-white/10 my-8"
+          className="relative w-full max-w-6xl bg-zinc-900 rounded-2xl border border-white/10 my-8"
           onClick={(e) => e.stopPropagation()}
         >
           <button
             onClick={onClose}
             className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors z-10"
-            aria-label="Close project details"
+            aria-label="Inchide detaliile proiectului"
           >
             <X className="w-5 h-5 text-white" />
           </button>
@@ -49,33 +49,69 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
             <div className="w-full h-64 md:h-96 mb-12 rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center overflow-hidden relative">
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
-              <div className="text-zinc-700 text-6xl font-bold opacity-20">Project snapshot</div>
+              {project.image ? (
+                <img
+                  src={project.image}
+                  alt={project.imageAlt ?? project.title}
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              ) : (
+                <div className="text-zinc-700 text-6xl font-bold opacity-20">Prezentare proiect</div>
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
 
             <div className="space-y-10">
+              {project.gallery && (
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-6">Capturi din aplicatie</h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {project.gallery.map((item) => (
+                      <div
+                        key={item.src}
+                        className="overflow-hidden rounded-xl border border-white/10 bg-white/5"
+                      >
+                        <div className="aspect-video bg-black overflow-hidden">
+                          <img
+                            src={item.src}
+                            alt={item.alt}
+                            className="h-full w-full object-contain"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div className="p-5">
+                          <h4 className="text-lg font-semibold text-white mb-2">{item.title}</h4>
+                          <p className="text-sm leading-relaxed text-zinc-400">{item.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               <div>
-                <h3 className="text-2xl font-bold text-white mb-4">Problem</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Problema</h3>
                 <p className="text-lg text-zinc-300 leading-relaxed">
                   {project.problem}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-white mb-4">Solution</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Solutia</h3>
                 <p className="text-lg text-zinc-300 leading-relaxed">
                   {project.solution}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-white mb-4">My Role</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Rolul meu</h3>
                 <p className="text-lg text-zinc-300 leading-relaxed">
                   {project.role}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
+                <h3 className="text-2xl font-bold text-white mb-6">Functionalitati cheie</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   {project.features.map((feature, index) => (
                     <div key={index} className="flex items-start gap-3">
@@ -87,7 +123,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-white mb-4">Technologies Used</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Tehnologii folosite</h3>
                 <div className="flex flex-wrap gap-3">
                   {project.technologies.map((tech, index) => (
                     <span
@@ -113,7 +149,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 onClick={onClose}
                 className="bg-white text-black hover:bg-zinc-200"
               >
-                Close Project
+                Inchide proiectul
               </Button>
             </div>
           </div>

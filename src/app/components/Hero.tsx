@@ -4,8 +4,8 @@ import { ArrowRight, FileText, Mail } from "lucide-react";
 
 const PERSONAL_INFO = {
   name: "Alexandru Dascalescu",
-  title: "AI Automation Developer & CAD Technical Designer",
-  tagline: "Practical automation for technical workflows."
+  title: "Dezvoltator AI Automation & Tehnician Proiectare CAD",
+  tagline: "Automatizare practica pentru workflow-uri tehnice."
 };
 
 export function Hero() {
@@ -38,7 +38,7 @@ export function Hero() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="inline-block mb-6 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm"
           >
-            <span className="text-sm text-zinc-300 font-medium">Available for AI automation roles and technical workflow projects</span>
+            <span className="text-sm text-zinc-300 font-medium">Disponibil pentru oportunitati noi</span>
           </motion.div>
 
           <motion.h1
@@ -74,8 +74,9 @@ export function Hero() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-lg md:text-xl text-zinc-400 max-w-3xl mx-auto mb-12 leading-relaxed"
           >
-            I build practical automation tools using Python, React/TypeScript, API integrations and AI-assisted workflows.
-            My CAD, MEP and solar PV background helps me turn technical processes into clear, useful software.
+            Construiesc aplicatii practice de automatizare folosind Python, React/TypeScript, integrare API,
+            procesare de date si workflow-uri asistate de AI. Experienta mea in proiectare CAD, instalatii MEP
+            si sisteme fotovoltaice ma ajuta sa transform procese tehnice complexe in software clar, util si usor de folosit.
           </motion.p>
 
           <motion.div
@@ -89,7 +90,7 @@ export function Hero() {
               onClick={() => scrollToSection("projects")}
               className="bg-white text-black hover:bg-zinc-200 transition-all duration-300 group px-8"
             >
-              View Projects
+              Vezi proiectele
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
@@ -99,7 +100,7 @@ export function Hero() {
               onClick={() => scrollToSection("cv")}
             >
               <FileText className="mr-2 h-4 w-4" />
-              Request CV
+              Descarca CV
             </Button>
             <Button
               size="lg"

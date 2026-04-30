@@ -23,10 +23,10 @@ export function Navigation() {
   };
 
   const navLinks = [
-    { label: "About", id: "about" },
-    { label: "Skills", id: "skills" },
-    { label: "Projects", id: "projects" },
-    { label: "Experience", id: "experience" },
+    { label: "Despre", id: "about" },
+    { label: "Competente", id: "skills" },
+    { label: "Proiecte", id: "projects" },
+    { label: "Experienta", id: "experience" },
     { label: "Contact", id: "contact" }
   ];
 
@@ -65,14 +65,14 @@ export function Navigation() {
                 onClick={() => scrollToSection("contact")}
                 className="bg-white text-black hover:bg-zinc-200 transition-all duration-300"
               >
-                Let&apos;s talk
+                Contact
               </Button>
             </div>
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors"
-              aria-label="Toggle navigation menu"
+              aria-label="Comuta meniul de navigare"
             >
               {isMobileMenuOpen ? (
                 <X className="w-5 h-5 text-white" />
@@ -113,7 +113,7 @@ export function Navigation() {
                 onClick={() => scrollToSection("contact")}
                 className="w-full bg-white text-black hover:bg-zinc-200 transition-all duration-300"
               >
-                Let&apos;s talk
+                Contact
               </Button>
             </div>
           </motion.div>

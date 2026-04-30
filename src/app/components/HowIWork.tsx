@@ -5,38 +5,38 @@ import { Target, Lightbulb, Cog, Sparkles, CheckCircle2, Repeat } from "lucide-r
 const workPrinciples = [
   {
     icon: Target,
-    title: "Practical problem framing",
-    description: "I start by clarifying the real workflow problem, the available data, the constraints and what a useful result should look like for the person using it.",
+    title: "Definire practica a problemei",
+    description: "Incep prin clarificarea workflow-ului real, a utilizatorului, a datelor disponibile, a limitelor si a rezultatului util.",
     color: "from-blue-500/10 to-cyan-500/10"
   },
   {
     icon: Lightbulb,
-    title: "Structured planning",
-    description: "I break complex work into small, testable steps so the project can move forward without losing sight of dependencies, priorities or edge cases.",
+    title: "Planificare structurata",
+    description: "Impart lucrul complex in pasi mici, verificabili, astfel incat proiectul sa avanseze fara sa piarda din vedere prioritatile si dependentele.",
     color: "from-purple-500/10 to-pink-500/10"
   },
   {
     icon: Cog,
-    title: "CAD-level accuracy",
-    description: "Technical design experience shaped my habit of checking details, naming things clearly and keeping documentation understandable for review and handoff.",
+    title: "Acuratete tehnica",
+    description: "Experienta in proiectare CAD m-a format sa verific detaliile, sa denumesc clar elementele si sa pastrez documentatia usor de urmarit.",
     color: "from-orange-500/10 to-red-500/10"
   },
   {
     icon: Sparkles,
-    title: "AI-assisted workflows",
-    description: "I use AI tools to explore options, structure requirements, compare implementation paths and speed up development while keeping the final logic reviewable.",
+    title: "Workflow-uri asistate de AI",
+    description: "Folosesc instrumente AI pentru structurarea cerintelor, compararea optiunilor, documentare si accelerarea dezvoltarii, pastrand logica finala usor de verificat.",
     color: "from-green-500/10 to-emerald-500/10"
   },
   {
     icon: Repeat,
-    title: "Automation where it helps",
-    description: "Repeated manual steps are opportunities to simplify a process, connect data sources and give users clearer outputs with less administrative effort.",
+    title: "Automatizare acolo unde ajuta",
+    description: "Pasii manuali repetitivi sunt oportunitati de simplificare, integrare de date si rezultate mai clare cu mai putin efort administrativ.",
     color: "from-amber-500/10 to-yellow-500/10"
   },
   {
     icon: CheckCircle2,
-    title: "Clear delivery",
-    description: "I aim for work that is useful, documented and easy to improve, with enough testing and verification to avoid obvious workflow or data mistakes.",
+    title: "Livrare clara",
+    description: "Urmaresc proiecte utile, documentate si usor de imbunatatit, cu testare si verificare suficiente pentru a evita erorile evidente.",
     color: "from-indigo-500/10 to-violet-500/10"
   }
 ];
@@ -54,15 +54,15 @@ export function HowIWork() {
           className="text-center mb-16"
         >
           <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-white/10 bg-white/5">
-            <span className="text-sm text-zinc-400">How I Work</span>
+            <span className="text-sm text-zinc-400">Cum lucrez</span>
           </div>
 
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
-            From Technical Problem to Useful Tool
+            De la problema tehnica la aplicatie utila
           </h2>
 
           <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-            A practical workflow shaped by technical design discipline, software experimentation and clear automation goals.
+            Un workflow practic, format prin proiectare tehnica, dezvoltare software si obiective clare de automatizare.
           </p>
         </motion.div>
 
@@ -101,14 +101,14 @@ export function HowIWork() {
           transition={{ delay: 0.8, duration: 0.8 }}
           className="mt-20 p-10 rounded-2xl border border-white/10 bg-zinc-900/50 backdrop-blur-sm"
         >
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">Typical Project Flow</h3>
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">Flux tipic de proiect</h3>
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { step: "01", title: "Understand", desc: "Clarify the workflow, users, data sources, constraints and practical success criteria." },
-              { step: "02", title: "Plan", desc: "Map the process, define the smallest useful version and identify risks early." },
-              { step: "03", title: "Build", desc: "Implement the workflow with clear UI, structured logic and frequent checks." },
-              { step: "04", title: "Verify", desc: "Test the result, document important decisions and note the next improvements." }
+              { step: "01", title: "Inteleg", desc: "Clarific workflow-ul, utilizatorii, datele, constrangerile si criteriile de succes." },
+              { step: "02", title: "Planific", desc: "Mapez procesul, definesc prima versiune utila si identific riscurile devreme." },
+              { step: "03", title: "Construiesc", desc: "Implementez workflow-ul cu UI clar, logica structurata si verificari frecvente." },
+              { step: "04", title: "Verific", desc: "Testez rezultatul, documentez deciziile importante si notez imbunatatirile urmatoare." }
             ].map((phase, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 rounded-full bg-white/5 border border-white/20 flex items-center justify-center text-2xl font-bold text-white mb-4 mx-auto">

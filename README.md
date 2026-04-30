@@ -1,28 +1,28 @@
-# Alexandru Dascalescu Portfolio
+# Portofoliu Alexandru Dascalescu
 
-Portfolio website for Alexandru Dascalescu, focused on AI automation roles and practical technical workflow projects.
+Portofoliu pentru Alexandru Dascalescu, orientat catre roluri de AI Automation si proiecte practice de automatizare pentru workflow-uri tehnice.
 
-## Focus
+## Directie
 
-- AI-assisted development, workflow automation, API integration and data processing
-- CAD technical design experience across MEP, electrical layouts, PV design and documentation
-- Portfolio projects: Trading Bot Dashboard, Solar Pre-Design & Quotation Platform and Scan&Clean Disk Analyzer
+- AI-assisted development, automatizare workflow-uri, integrare API si procesare de date
+- Proiectare CAD, instalatii MEP, layout-uri electrice, proiectare PV si documentatie tehnica
+- Proiecte principale: Trading Bot Dashboard, Solar Pre-Design & Quotation Platform si Scan&Clean Disk Analyzer
 
-## Running the Project
+## Rulare proiect
 
-Install dependencies:
+Instalare dependinte:
 
 ```bash
 npm install
 ```
 
-Start the development server:
+Pornire server de dezvoltare:
 
 ```bash
 npm run dev
 ```
 
-Create a production build:
+Build de productie:
 
 ```bash
 npm run build

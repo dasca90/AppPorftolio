@@ -16,65 +16,152 @@ export interface Project {
   impact: string;
   category: string;
   image?: string;
+  imageAlt?: string;
+  gallery?: {
+    title: string;
+    description: string;
+    src: string;
+    alt: string;
+  }[];
 }
 
 const projects: Project[] = [
   {
     id: "trading-bot-dashboard",
-    title: "Trading Bot Dashboard",
-    summary: "Crypto market scanning dashboard with decision rules, confidence logic, journal reports and exchange API workflows.",
-    problem: "Manual crypto market review can become repetitive and difficult to document consistently. A useful workflow needs structured scans, clear decision rules, traceable results and notifications without hiding the logic from the user.",
-    solution: "I built a dashboard concept that brings market scanning, confidence scoring, trading journal entries, reports and Binance/API integration into one practical workflow for review and iteration.",
-    role: "Automation developer - I designed the scanning logic, UI structure, reporting flow and API-based automation approach.",
+    title: "Aplicatie Crypto Trading",
+    summary: "Dashboard pentru automatizare si analiza crypto, cu scanner de piata, reguli de decizie, jurnal de tranzactii si integrare API.",
+    problem: "Analiza manuala a pietei crypto poate deveni repetitiva si greu de documentat coerent. Un workflow util are nevoie de scanare structurata, reguli clare, pozitii deschise vizibile, rezultate urmaribile si notificari.",
+    solution: "Am construit un concept de dashboard care reuneste scanarea pietei, logica de incredere, pozitii deschise, jurnal de tranzactii, rapoarte si integrare Binance API intr-un workflow practic de analiza si monitorizare.",
+    role: "Dezvoltator automatizare - am definit logica de scanare, structura UI, fluxul de raportare si modul de integrare API.",
     features: [
-      "Crypto market scanning for selected symbols and conditions",
-      "Decision rules with confidence logic that can be reviewed",
-      "Trading journal entries and performance-style reports",
-      "Binance/API integration planning for account and market data",
-      "Notification workflow for important scan results",
-      "Dashboard views for monitoring signals and outcomes"
+      "Scanare piata crypto pentru simboluri si conditii selectate",
+      "Reguli de decizie si logica de incredere usor de verificat",
+      "Monitorizare pozitii deschise si status tranzactii",
+      "Jurnal de tranzactii si rapoarte pentru analiza rezultatelor",
+      "Integrare Binance API pentru date de piata si cont",
+      "Notificari automate pentru rezultate importante"
     ],
-    technologies: ["Python", "React", "TypeScript", "Binance API", "Data processing", "Notifications"],
-    impact: "Turns a manual research routine into a more structured and repeatable review process with clearer notes, rules and follow-up actions.",
-    category: "AI & Automation"
+    technologies: ["Python", "React", "TypeScript", "Binance API", "Procesare date", "Notificari"],
+    impact: "Transforma o rutina manuala de analiza intr-un proces mai structurat, cu reguli clare, note mai bune si actiuni mai usor de urmarit.",
+    category: "AI & Automatizare",
+    image: "/projects/trading-bot/dashboard.jpg",
+    imageAlt: "Dashboard Trading Bot",
+    gallery: [
+      {
+        title: "Bot Tuning",
+        description: "Configurare avansata pentru strategii, TP/SL, trailing logic si grupe de risc.",
+        src: "/projects/trading-bot/bot-tuning.jpg",
+        alt: "Bot Tuning pentru Trading Bot Dashboard"
+      },
+      {
+        title: "Dashboard",
+        description: "Monitorizare live pentru profit, capital, pozitii deschise si status boti.",
+        src: "/projects/trading-bot/dashboard.jpg",
+        alt: "Dashboard cu profit, capital si pozitii deschise"
+      },
+      {
+        title: "Journal",
+        description: "Rapoarte automate cu performanta, tranzactii, win rate si recomandari.",
+        src: "/projects/trading-bot/journal.jpg",
+        alt: "Journal cu rapoarte automate si tranzactii"
+      },
+      {
+        title: "Logs & Diagnostics",
+        description: "Debugging si audit pentru decizii automate, notificari si erori.",
+        src: "/projects/trading-bot/logs-diagnostics.jpg",
+        alt: "Logs si diagnostics pentru decizii automate"
+      },
+      {
+        title: "Market Analyzer",
+        description: "Analiza multi-timeframe pentru trend, incredere si recomandare strategie.",
+        src: "/projects/trading-bot/market-analyzer.jpg",
+        alt: "Market Analyzer cu analiza multi-timeframe"
+      },
+      {
+        title: "Settings & Risk Control",
+        description: "Control risc, notificari Telegram, emergency stop si limite de tranzactionare.",
+        src: "/projects/trading-bot/settings-risk-control.jpg",
+        alt: "Settings si control risc pentru Trading Bot"
+      },
+      {
+        title: "Trade View",
+        description: "Scanner de piata, grafic, watchlist, pozitii si buy/sell manual.",
+        src: "/projects/trading-bot/trade-view.jpg",
+        alt: "Trade View cu scanner de piata si pozitii"
+      }
+    ]
   },
   {
     id: "solar-quotation-platform",
-    title: "Solar Pre-Design & Quotation Platform",
-    summary: "PV pre-design workflow for roof layouts, panel planning, equipment data and quotation preparation.",
-    problem: "Solar quotation work often starts with repeated layout checks, equipment matching and early technical assumptions. Without a simple workflow, the first proposal can take too long and become hard to adjust.",
-    solution: "I designed a practical pre-design platform concept based on real PV design experience: 2D roof and panel planning, equipment data handling and a clearer quotation workflow for early-stage proposals.",
-    role: "CAD technical designer and automation developer - I shaped the PV workflow, layout logic, equipment data model and quotation steps.",
+    title: "Platforma Pre-proiectare si Ofertare pentru Fotovoltaice",
+    summary: "Platforma de pre-proiectare solara 2D pentru layout panouri, date tehnice, echipamente si flux de ofertare.",
+    problem: "Fluxul initial pentru ofertare solara include verificari repetate de acoperis, layout panouri, echipamente, estimari si date tehnice. Fara un workflow clar, pregatirea unei oferte poate dura mult si poate fi greu de ajustat.",
+    solution: "Am proiectat o platforma de pre-design bazata pe experienta reala in proiectare PV: editor acoperis 2D, layout panouri fotovoltaice, selectie echipamente, date tehnice si pasi clari pentru ofertare.",
+    role: "Tehnician Proiectare CAD si dezvoltator automatizare - am definit fluxul PV, logica de layout, modelul de date pentru echipamente si pasii de ofertare.",
     features: [
-      "2D solar pre-design for roof and panel layout planning",
-      "Panel placement workflow informed by PV design constraints",
-      "Equipment data handling for panels, inverters and accessories",
-      "Quotation workflow for early customer proposals",
-      "Technical notes based on real solar design experience",
-      "Structured data ready for review, update and reuse"
+      "Editor acoperis 2D pentru pre-proiectare solara",
+      "Layout panouri fotovoltaice pe baza constrangerilor de proiectare",
+      "Selectie echipamente pentru panouri, invertoare si accesorii",
+      "Date tehnice structurate pentru verificare si reutilizare",
+      "Flux de ofertare pentru propuneri initiale catre clienti",
+      "Estimari productie si ROI pentru analiza preliminara"
     ],
-    technologies: ["React", "TypeScript", "Python", "AutoCAD", "PV design", "PDF workflow"],
-    impact: "Helps turn early PV design knowledge into a clearer, faster quotation process with fewer repeated manual steps.",
-    category: "Technical Workflow"
+    technologies: ["React", "TypeScript", "Python", "AutoCAD", "Proiectare PV", "Flux PDF"],
+    impact: "Ajuta la transformarea experientei de proiectare PV intr-un proces de ofertare mai clar, mai rapid si mai usor de revizuit.",
+    category: "Workflow tehnic",
+    image: "/projects/solar-platform/editor-acoperis.jpg",
+    imageAlt: "Editor acoperis pentru platforma fotovoltaica",
+    gallery: [
+      {
+        title: "Design Electric",
+        description: "Configurare invertor, baterie, stringuri, cabluri si verificare compatibilitate.",
+        src: "/projects/solar-platform/design-electric.jpg",
+        alt: "Design Electric pentru configurare invertor si compatibilitate"
+      },
+      {
+        title: "Editor Acoperis",
+        description: "Layout 2D pentru acoperis, orientare, margini si amplasare panouri FV.",
+        src: "/projects/solar-platform/editor-acoperis.jpg",
+        alt: "Editor Acoperis cu layout 2D si amplasare panouri FV"
+      },
+      {
+        title: "Fise Tehnice PDF",
+        description: "Import PDF, extragere date tehnice si imagini pentru catalog echipamente.",
+        src: "/projects/solar-platform/fise-tehnice-pdf.jpg",
+        alt: "Fise Tehnice PDF cu extragere date si imagini"
+      },
+      {
+        title: "Raport Productie & ROI",
+        description: "Grafice pentru productie, consum, autoconsum, economii si recuperare investitie.",
+        src: "/projects/solar-platform/raport-productie-roi.jpg",
+        alt: "Raport Productie si ROI cu grafice si economii"
+      },
+      {
+        title: "Editor Oferta",
+        description: "Raport personalizabil cu logo, date client, KPI-uri si sectiuni configurabile.",
+        src: "/projects/solar-platform/editor-oferta.jpg",
+        alt: "Editor Oferta cu raport personalizabil si sectiuni configurabile"
+      }
+    ]
   },
   {
     id: "scan-clean-disk-analyzer",
     title: "Scan&Clean Disk Analyzer",
-    summary: "Desktop productivity tool that scans drives and folders to reveal the largest files, folders and cleanup opportunities.",
-    problem: "Storage cleanup is slow when users cannot quickly see what is actually taking space across folders, drives and old downloads.",
-    solution: "I built a practical disk analysis tool concept that scans selected folders or HDDs, ranks the largest files and directories, and helps users decide what to review or remove.",
-    role: "Python automation developer - I planned the scanning flow, data processing, result grouping and clean UI logic.",
+    summary: "Tool pentru scanarea folderelor si HDD-urilor, identificarea fisierelor mari si analiza spatiului ocupat pe disk.",
+    problem: "Curatarea spatiului de stocare devine lenta atunci cand utilizatorul nu vede rapid ce fisiere, foldere sau zone de pe disk ocupa cel mai mult spatiu.",
+    solution: "Am construit un concept de analizor spatiu disk care scaneaza foldere si HDD-uri, grupeaza rezultatele, evidentiaza fisiere mari si ajuta utilizatorul sa decida ce trebuie curatat sau organizat.",
+    role: "Dezvoltator automatizare Python - am planificat fluxul de scanare, procesarea datelor, gruparea rezultatelor si logica UI.",
     features: [
-      "Folder and HDD scanning for disk usage analysis",
-      "Largest files and folders detection",
-      "Grouped results that make cleanup decisions easier",
-      "Basic filters for file type, size and location",
-      "Progress feedback for long scans",
-      "Practical productivity workflow for storage review"
+      "Scanare foldere si HDD pentru analiza spatiului ocupat",
+      "Detectare fisiere mari si foldere cu volum ridicat",
+      "Rezultate grupate pentru decizii rapide de curatare",
+      "Filtre dupa tip fisier, dimensiune si locatie",
+      "Feedback de progres pentru scanari mai lungi",
+      "Utilitar de productivitate pentru curatare si organizare"
     ],
-    technologies: ["Python", "Desktop app", "File-system scanning", "Data processing", "UI logic"],
-    impact: "Makes storage cleanup easier to understand by replacing guesswork with clear file and folder usage data.",
-    category: "Productivity Automation"
+    technologies: ["Python", "Aplicatie desktop", "Scanare fisiere", "Procesare date", "Logica UI"],
+    impact: "Face curatarea spatiului pe disk mai clara prin inlocuirea presupunerilor cu date vizibile despre fisiere, foldere si dimensiuni.",
+    category: "Automatizare productivitate"
   }
 ];
 
@@ -93,15 +180,15 @@ export function Projects() {
             className="text-center mb-16"
           >
             <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-white/10 bg-white/5">
-              <span className="text-sm text-zinc-400">Selected Work</span>
+              <span className="text-sm text-zinc-400">Proiecte selectate</span>
             </div>
 
             <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
-              AI Automation Portfolio Projects
+              Proiecte AI Automation
             </h2>
 
             <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-              Three practical projects that show automation, API integration, data processing and technical workflow thinking.
+              Trei proiecte practice care arata automatizare, integrare API, procesare de date si gandire de workflow tehnic.
             </p>
           </motion.div>
 
@@ -118,7 +205,17 @@ export function Projects() {
                 <div className="relative h-full p-8 rounded-2xl border border-white/10 bg-zinc-900/50 backdrop-blur-sm hover:border-white/20 transition-all duration-300 hover:transform hover:scale-[1.02]">
                   <div className="w-full h-48 mb-6 rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center overflow-hidden relative">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
-                    <div className="text-zinc-600 text-4xl font-bold opacity-20">{index + 1}</div>
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={project.imageAlt ?? project.title}
+                        className="absolute inset-0 h-full w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="text-zinc-600 text-4xl font-bold opacity-20">{index + 1}</div>
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                     <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <ExternalLink className="w-5 h-5 text-white" />
                     </div>
@@ -150,7 +247,7 @@ export function Projects() {
                   </div>
 
                   <div className="flex items-center text-white group-hover:translate-x-2 transition-transform duration-300">
-                    <span className="text-sm font-medium">View Details</span>
+                    <span className="text-sm font-medium">Vezi detalii</span>
                     <ArrowUpRight className="ml-2 w-4 h-4" />
                   </div>
                 </div>

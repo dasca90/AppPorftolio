@@ -4,51 +4,51 @@ import { Briefcase, Calendar } from "lucide-react";
 
 const experiences = [
   {
-    role: "CAD & Installations Technical Designer",
-    company: "Contractor, Alex Dasca Design Studio",
-    period: "Jan 2025 - Present",
-    description: "Contract technical design work focused on clear CAD documentation, installation layouts and practical coordination details for residential and technical projects.",
+    role: "Tehnician Proiectare CAD & Instalatii - Contractor",
+    company: "Alex Dasca Design Studio",
+    period: "Ian 2025 - Prezent",
+    description: "Proiectare tehnica pe baza de contract, cu accent pe documentatie CAD clara, layout-uri pentru instalatii si detalii practice pentru proiecte rezidentiale si tehnice.",
     highlights: [
-      "Prepared CAD drawings, technical layouts and installation documentation",
-      "Worked with electrical, MEP and bathroom elevation requirements",
-      "Translated project needs into clear drawings that can be reviewed and executed",
-      "Used structured workflows to reduce repeated drafting and documentation effort"
+      "Pregatire desene CAD, layout-uri tehnice si documentatie pentru instalatii",
+      "Lucru cu cerinte electrice, MEP, sanitare, ventilatie si elevatii bai",
+      "Transformarea cerintelor de proiect in desene clare si usor de verificat",
+      "Folosirea unor workflow-uri structurate pentru reducerea muncii repetitive"
     ]
   },
   {
-    role: "Solar Photovoltaic Design Technician",
+    role: "Tehnician Proiectare Fotovoltaic",
     company: "Sunworks Ltd",
     period: "Dec 2021 - Dec 2024",
-    description: "Solar PV design experience covering early layout planning, equipment coordination and technical documentation for photovoltaic projects.",
+    description: "Experienta in proiectare PV, layout-uri initiale, coordonare echipamente si documentatie tehnica pentru sisteme fotovoltaice.",
     highlights: [
-      "Supported roof and panel layout planning for PV installations",
-      "Worked with equipment data, system constraints and technical project notes",
-      "Created design documentation for review, quotation and project coordination",
-      "Built the practical background behind the solar pre-design and quotation platform project"
+      "Suport pentru planificarea acoperisurilor si layout-urilor de panouri fotovoltaice",
+      "Lucru cu date de echipamente, constrangeri de sistem si note tehnice",
+      "Pregatire documentatie pentru verificare, ofertare si coordonare proiect",
+      "Baza practica pentru platforma de pre-proiectare solara si ofertare"
     ]
   },
   {
-    role: "MEP Installations Technician",
+    role: "Tehnician Instalatii MEP",
     company: "Dandara",
     period: "Mar 2019 - Dec 2021",
-    description: "Hands-on MEP installations experience that strengthened my understanding of technical drawings, site constraints and the need for accurate documentation.",
+    description: "Experienta practica in instalatii MEP, cu intelegere directa a desenelor tehnice, constrangerilor de santier si nevoii de documentatie precisa.",
     highlights: [
-      "Worked with mechanical, electrical and plumbing installation requirements",
-      "Read and checked technical drawings against practical site conditions",
-      "Coordinated details needed for clean installation and follow-up work",
-      "Built a practical mindset for solving technical workflow problems"
+      "Lucru cu cerinte mecanice, electrice, sanitare si de ventilatie",
+      "Citire si verificare desene tehnice in raport cu situatii reale de santier",
+      "Coordonare detalii necesare pentru executie si verificari ulterioare",
+      "Formarea unei abordari practice pentru rezolvarea problemelor tehnice"
     ]
   },
   {
-    role: "AI & Automation Project Experience",
-    company: "Personal portfolio projects",
-    period: "2023 - Present",
-    description: "Portfolio project work using AI-assisted development, Python, React/TypeScript, API integrations and data processing to build useful automation tools.",
+    role: "Experienta proiecte AI & Automatizare",
+    company: "Proiecte personale / portofoliu",
+    period: "2023 - Prezent",
+    description: "Experienta prin proiecte personale si de portofoliu, folosind AI-assisted development, Python, React/TypeScript, integrare API si procesare de date pentru aplicatii practice de automatizare.",
     highlights: [
-      "Built trading dashboard workflows with market scanning, decision rules and reports",
-      "Designed a solar pre-design and quotation workflow based on PV experience",
-      "Built productivity automation concepts such as Scan&Clean Disk Analyzer",
-      "Used documentation, testing and debugging habits to keep projects practical and maintainable"
+      "Dezvoltare workflow-uri pentru trading dashboard cu scanner de piata, reguli de decizie si rapoarte",
+      "Proiectare workflow de pre-design solar si ofertare pe baza experientei PV",
+      "Dezvoltare concepte de productivitate precum Scan&Clean Disk Analyzer",
+      "Folosirea documentatiei, testarii si debugging-ului pentru proiecte mai clare si mentenabile"
     ]
   }
 ];
@@ -69,15 +69,15 @@ export function Experience() {
           className="text-center mb-16"
         >
           <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-white/10 bg-white/5">
-            <span className="text-sm text-zinc-400">Experience</span>
+            <span className="text-sm text-zinc-400">Experienta</span>
           </div>
 
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
-            Technical Background & Automation Practice
+            Parcurs tehnic si practica in automatizare
           </h2>
 
           <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-            A career path combining CAD and installation experience with portfolio projects in automation, data processing and practical software tools.
+            Experienta in proiectare CAD, instalatii MEP si sisteme fotovoltaice, completata de proiecte personale in automatizare, procesare date si aplicatii software.
           </p>
         </motion.div>
 

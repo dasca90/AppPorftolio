@@ -5,26 +5,26 @@ import { Code, Layers, Sparkles, Wrench } from "lucide-react";
 const skillCategories = [
   {
     icon: Sparkles,
-    title: "AI & Automation",
-    skills: ["AI-assisted development", "Workflow automation", "Prompt engineering", "Data processing", "API integration", "Process optimization"],
+    title: "AI & Automatizare",
+    skills: ["AI-assisted development", "Automatizare workflow-uri", "Prompt engineering", "Procesare date", "Integrare API", "Optimizare procese"],
     color: "from-orange-500/20 to-red-500/20"
   },
   {
     icon: Code,
-    title: "Software Development",
-    skills: ["Python", "React", "TypeScript", "JavaScript", "Desktop apps", "UI logic"],
+    title: "Dezvoltare Software",
+    skills: ["Python", "React", "TypeScript", "JavaScript", "Aplicatii desktop", "Logica UI"],
     color: "from-purple-500/20 to-pink-500/20"
   },
   {
     icon: Layers,
-    title: "Technical Design",
-    skills: ["AutoCAD", "Electrical layouts", "MEP coordination", "PV design", "Technical documentation", "Bathroom elevations"],
+    title: "Proiectare Tehnica",
+    skills: ["AutoCAD", "Layout-uri electrice", "Coordonare MEP", "Proiectare PV", "Documentatie tehnica", "Elevatii bai"],
     color: "from-blue-500/20 to-cyan-500/20"
   },
   {
     icon: Wrench,
-    title: "Tools & Workflow",
-    skills: ["GitHub", "VS Code", "Debugging", "Documentation", "Testing", "Project planning"],
+    title: "Tool-uri & Workflow",
+    skills: ["GitHub", "VS Code", "Debugging", "Documentatie", "Testare", "Planificare proiecte"],
     color: "from-amber-500/20 to-yellow-500/20"
   }
 ];
@@ -45,15 +45,15 @@ export function Skills() {
           className="text-center mb-16"
         >
           <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-white/10 bg-white/5">
-            <span className="text-sm text-zinc-400">Core Skills</span>
+            <span className="text-sm text-zinc-400">Competente principale</span>
           </div>
 
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
-            Practical Capabilities
+            Capabilitati practice
           </h2>
 
           <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-            A focused mix of automation, software development and CAD-based technical design experience.
+            O combinatie concentrata de automatizare, dezvoltare software si experienta in proiectare tehnica CAD.
           </p>
         </motion.div>
 

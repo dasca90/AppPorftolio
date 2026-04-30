@@ -10,7 +10,7 @@ const CONTACT_INFO = {
   email: "alexdasca@gmail.com",
   linkedin: "https://linkedin.com/in/alexandru-dascalescu-5aaa49191",
   address: "Brasov, Romania",
-  phoneNote: "Available on request"
+  phoneNote: "Disponibil la cerere"
 };
 
 export function Contact() {
@@ -25,10 +25,10 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const subject = encodeURIComponent(formData.subject || "Portfolio contact");
+    const subject = encodeURIComponent(formData.subject || "Contact portofoliu");
     const body = encodeURIComponent(
       [
-        `Name: ${formData.name}`,
+        `Nume: ${formData.name}`,
         `Email: ${formData.email}`,
         "",
         formData.message
@@ -52,11 +52,11 @@ export function Contact() {
           </div>
 
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
-            Let&apos;s Discuss the Workflow
+            Hai sa discutam workflow-ul
           </h2>
 
           <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-            Open to AI automation roles, practical workflow projects and technical design collaborations.
+            Deschis pentru roluri de AI Automation, proiecte practice de automatizare si colaborari in proiectare tehnica.
           </p>
         </motion.div>
 
@@ -68,7 +68,7 @@ export function Contact() {
             className="space-y-6"
           >
             <div className="p-6 rounded-2xl border border-white/10 bg-zinc-900/50 backdrop-blur-sm">
-              <h3 className="text-xl font-bold text-white mb-6">Contact Details</h3>
+              <h3 className="text-xl font-bold text-white mb-6">Informatii contact</h3>
 
               <div className="space-y-4">
                 <a
@@ -104,20 +104,20 @@ export function Contact() {
                     <MapPin className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <div className="text-sm text-zinc-400">Location</div>
+                    <div className="text-sm text-zinc-400">Locatie</div>
                     <div className="text-white font-medium">{CONTACT_INFO.address}</div>
                   </div>
                 </div>
 
                 <button
-                  onClick={() => window.location.href = `mailto:${CONTACT_INFO.email}?subject=Phone%20request`}
+                  onClick={() => window.location.href = `mailto:${CONTACT_INFO.email}?subject=Solicitare%20telefon`}
                   className="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors group cursor-pointer w-full text-left"
                 >
                   <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Phone className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <div className="text-sm text-zinc-400">Phone</div>
+                    <div className="text-sm text-zinc-400">Telefon</div>
                     <div className="text-white font-medium">{CONTACT_INFO.phoneNote}</div>
                   </div>
                 </button>
@@ -125,9 +125,9 @@ export function Contact() {
             </div>
 
             <div className="p-6 rounded-2xl border border-white/10 bg-zinc-900/50 backdrop-blur-sm">
-              <h3 className="text-lg font-semibold text-white mb-3">Response Time</h3>
+              <h3 className="text-lg font-semibold text-white mb-3">Timp de raspuns</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                I usually reply within 24-48 hours on working days.
+                Raspund de obicei in 24-48 de ore in zilele lucratoare.
               </p>
             </div>
           </motion.div>
@@ -139,18 +139,18 @@ export function Contact() {
             className="lg:col-span-2"
           >
             <form onSubmit={handleSubmit} className="p-8 rounded-2xl border border-white/10 bg-zinc-900/50 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Trimite un mesaj</h3>
 
               <div className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-2">
-                      Name
+                      Nume
                     </label>
                     <Input
                       id="name"
                       type="text"
-                      placeholder="Full name"
+                      placeholder="Nume complet"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="bg-white/5 border-white/10 text-white placeholder:text-zinc-500"
@@ -160,12 +160,12 @@ export function Contact() {
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">
-                      Email
+                      Adresa email
                     </label>
                     <Input
                       id="email"
                       type="email"
-                      placeholder="Email address"
+                      placeholder="Adresa email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="bg-white/5 border-white/10 text-white placeholder:text-zinc-500"
@@ -176,12 +176,12 @@ export function Contact() {
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-zinc-300 mb-2">
-                    Subject
+                    Subiect
                   </label>
                   <Input
                     id="subject"
                     type="text"
-                    placeholder="AI automation role or project"
+                    placeholder="Rol AI Automation sau proiect"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     className="bg-white/5 border-white/10 text-white placeholder:text-zinc-500"
@@ -191,11 +191,11 @@ export function Contact() {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-zinc-300 mb-2">
-                    Message
+                    Mesaj
                   </label>
                   <Textarea
                     id="message"
-                    placeholder="Tell me about the role, workflow or project..."
+                    placeholder="Descrie rolul, workflow-ul sau proiectul..."
                     rows={6}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -210,7 +210,7 @@ export function Contact() {
                   className="w-full bg-white text-black hover:bg-zinc-200 transition-all duration-300"
                 >
                   <MessageSquare className="mr-2 h-5 w-5" />
-                  Send Message
+                  Trimite mesaj
                 </Button>
               </div>
             </form>

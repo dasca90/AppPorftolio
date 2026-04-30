@@ -4,7 +4,7 @@ const FOOTER_INFO = {
   name: "Alexandru Dascalescu",
   email: "alexdasca@gmail.com",
   linkedin: "https://linkedin.com/in/alexandru-dascalescu-5aaa49191",
-  tagline: "AI Automation Developer & CAD Technical Designer building practical tools for technical workflows."
+  tagline: "Dezvoltator AI Automation & Tehnician Proiectare CAD, orientat spre aplicatii practice pentru workflow-uri tehnice."
 };
 
 export function Footer() {
@@ -45,13 +45,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-white font-semibold mb-4">Linkuri rapide</h4>
             <ul className="space-y-2">
               {[
-                { label: "About", id: "about" },
-                { label: "Skills", id: "skills" },
-                { label: "Projects", id: "projects" },
-                { label: "Experience", id: "experience" }
+                { label: "Despre", id: "about" },
+                { label: "Competente", id: "skills" },
+                { label: "Proiecte", id: "projects" },
+                { label: "Experienta", id: "experience" }
               ].map((link) => (
                 <li key={link.id}>
                   <button
@@ -73,7 +73,7 @@ export function Footer() {
                   onClick={() => scrollToSection("contact")}
                   className="text-zinc-400 hover:text-white transition-colors"
                 >
-                  Contact Form
+                  Formular contact
                 </button>
               </li>
               <li>
@@ -81,7 +81,7 @@ export function Footer() {
                   onClick={() => scrollToSection("cv")}
                   className="text-zinc-400 hover:text-white transition-colors"
                 >
-                  Request CV
+                  Solicita CV
                 </button>
               </li>
               <li>
@@ -98,10 +98,10 @@ export function Footer() {
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-zinc-500 text-sm">
-            &copy; {currentYear} {FOOTER_INFO.name}. All rights reserved.
+            &copy; {currentYear} {FOOTER_INFO.name}. Toate drepturile rezervate.
           </p>
           <p className="text-zinc-500 text-sm">
-            Built with practical automation and technical precision.
+            Construit cu precizie si atentie la detalii
           </p>
         </div>
       </div>
