@@ -25,6 +25,8 @@ export interface Project {
   }[];
 }
 
+const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+
 const projects: Project[] = [
   {
     id: "trading-bot-dashboard",
@@ -44,49 +46,49 @@ const projects: Project[] = [
     technologies: ["Python", "React", "TypeScript", "Binance API", "Procesare date", "Notificari"],
     impact: "Transforma o rutina manuala de analiza intr-un proces mai structurat, cu reguli clare, note mai bune si actiuni mai usor de urmarit.",
     category: "AI & Automatizare",
-    image: "/projects/trading-bot/dashboard.jpg",
+    image: publicAsset("projects/trading-bot/dashboard.jpg"),
     imageAlt: "Dashboard Trading Bot",
     gallery: [
       {
         title: "Bot Tuning",
         description: "Configurare avansata pentru strategii, TP/SL, trailing logic si grupe de risc.",
-        src: "/projects/trading-bot/bot-tuning.jpg",
+        src: publicAsset("projects/trading-bot/bot-tuning.jpg"),
         alt: "Bot Tuning pentru Trading Bot Dashboard"
       },
       {
         title: "Dashboard",
         description: "Monitorizare live pentru profit, capital, pozitii deschise si status boti.",
-        src: "/projects/trading-bot/dashboard.jpg",
+        src: publicAsset("projects/trading-bot/dashboard.jpg"),
         alt: "Dashboard cu profit, capital si pozitii deschise"
       },
       {
         title: "Journal",
         description: "Rapoarte automate cu performanta, tranzactii, win rate si recomandari.",
-        src: "/projects/trading-bot/journal.jpg",
+        src: publicAsset("projects/trading-bot/journal.jpg"),
         alt: "Journal cu rapoarte automate si tranzactii"
       },
       {
         title: "Logs & Diagnostics",
         description: "Debugging si audit pentru decizii automate, notificari si erori.",
-        src: "/projects/trading-bot/logs-diagnostics.jpg",
+        src: publicAsset("projects/trading-bot/logs-diagnostics.jpg"),
         alt: "Logs si diagnostics pentru decizii automate"
       },
       {
         title: "Market Analyzer",
         description: "Analiza multi-timeframe pentru trend, incredere si recomandare strategie.",
-        src: "/projects/trading-bot/market-analyzer.jpg",
+        src: publicAsset("projects/trading-bot/market-analyzer.jpg"),
         alt: "Market Analyzer cu analiza multi-timeframe"
       },
       {
         title: "Settings & Risk Control",
         description: "Control risc, notificari Telegram, emergency stop si limite de tranzactionare.",
-        src: "/projects/trading-bot/settings-risk-control.jpg",
+        src: publicAsset("projects/trading-bot/settings-risk-control.jpg"),
         alt: "Settings si control risc pentru Trading Bot"
       },
       {
         title: "Trade View",
         description: "Scanner de piata, grafic, watchlist, pozitii si buy/sell manual.",
-        src: "/projects/trading-bot/trade-view.jpg",
+        src: publicAsset("projects/trading-bot/trade-view.jpg"),
         alt: "Trade View cu scanner de piata si pozitii"
       }
     ]
@@ -109,37 +111,37 @@ const projects: Project[] = [
     technologies: ["React", "TypeScript", "Python", "AutoCAD", "Proiectare PV", "Flux PDF"],
     impact: "Ajuta la transformarea experientei de proiectare PV intr-un proces de ofertare mai clar, mai rapid si mai usor de revizuit.",
     category: "Workflow tehnic",
-    image: "/projects/solar-platform/editor-acoperis.jpg",
+    image: publicAsset("projects/solar-platform/editor-acoperis.jpg"),
     imageAlt: "Editor acoperis pentru platforma fotovoltaica",
     gallery: [
       {
         title: "Design Electric",
         description: "Configurare invertor, baterie, stringuri, cabluri si verificare compatibilitate.",
-        src: "/projects/solar-platform/design-electric.jpg",
+        src: publicAsset("projects/solar-platform/design-electric.jpg"),
         alt: "Design Electric pentru configurare invertor si compatibilitate"
       },
       {
         title: "Editor Acoperis",
         description: "Layout 2D pentru acoperis, orientare, margini si amplasare panouri FV.",
-        src: "/projects/solar-platform/editor-acoperis.jpg",
+        src: publicAsset("projects/solar-platform/editor-acoperis.jpg"),
         alt: "Editor Acoperis cu layout 2D si amplasare panouri FV"
       },
       {
         title: "Fise Tehnice PDF",
         description: "Import PDF, extragere date tehnice si imagini pentru catalog echipamente.",
-        src: "/projects/solar-platform/fise-tehnice-pdf.jpg",
+        src: publicAsset("projects/solar-platform/fise-tehnice-pdf.jpg"),
         alt: "Fise Tehnice PDF cu extragere date si imagini"
       },
       {
         title: "Raport Productie & ROI",
         description: "Grafice pentru productie, consum, autoconsum, economii si recuperare investitie.",
-        src: "/projects/solar-platform/raport-productie-roi.jpg",
+        src: publicAsset("projects/solar-platform/raport-productie-roi.jpg"),
         alt: "Raport Productie si ROI cu grafice si economii"
       },
       {
         title: "Editor Oferta",
         description: "Raport personalizabil cu logo, date client, KPI-uri si sectiuni configurabile.",
-        src: "/projects/solar-platform/editor-oferta.jpg",
+        src: publicAsset("projects/solar-platform/editor-oferta.jpg"),
         alt: "Editor Oferta cu raport personalizabil si sectiuni configurabile"
       }
     ]
@@ -163,31 +165,31 @@ const projects: Project[] = [
     technologies: ["Tauri", "React", "TypeScript", "Local-first storage", "Word/Excel import", "PDF generation"],
     impact: "Reduce timpul de pregatire a facturilor si pastreaza un istoric clar pentru clienti, status plata, documente PDF si exporturi CSV.",
     category: "Automatizare productivitate",
-    image: "/projects/facturator-v1/generare-factura.jpg",
+    image: publicAsset("projects/facturator-v1/generare-factura.jpg"),
     imageAlt: "Facturatorul V1 cu editor vizual pentru factura",
     gallery: [
       {
         title: "Clienti",
         description: "Administrare clienti, contacte si reguli de facturare.",
-        src: "/projects/facturator-v1/clienti.jpg",
+        src: publicAsset("projects/facturator-v1/clienti.jpg"),
         alt: "Facturatorul V1 - administrare clienti si reguli de facturare"
       },
       {
         title: "Generare factura",
         description: "Editor factura cu logo, layout, servicii, totaluri si ghidaje de print.",
-        src: "/projects/facturator-v1/generare-factura.jpg",
+        src: publicAsset("projects/facturator-v1/generare-factura.jpg"),
         alt: "Facturatorul V1 - editor factura cu layout si totaluri"
       },
       {
         title: "Intrari Word sau Excel",
         description: "Extragere date din Word/Excel, calcul ore facturabile si pregatire factura.",
-        src: "/projects/facturator-v1/intrari-word-excel.jpg",
+        src: publicAsset("projects/facturator-v1/intrari-word-excel.jpg"),
         alt: "Facturatorul V1 - import date din Word si Excel"
       },
       {
         title: "Istoric facturi",
         description: "Evidenta facturi, status plata, PDF-uri si export CSV.",
-        src: "/projects/facturator-v1/istoric-facturi.jpg",
+        src: publicAsset("projects/facturator-v1/istoric-facturi.jpg"),
         alt: "Facturatorul V1 - istoric facturi si export CSV"
       }
     ]
