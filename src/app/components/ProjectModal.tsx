@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "motion/react";
-import { X, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
+import { X, CheckCircle2, ZoomIn } from "lucide-react";
 import { Project } from "./Projects";
 import { Button } from "./ui/button";
 
@@ -9,13 +10,15 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ project, onClose }: ProjectModalProps) {
+  const [expandedImage, setExpandedImage] = useState<NonNullable<Project["gallery"]>[number] | null>(null);
+
   return (
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 overflow-y-auto"
+        className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-start justify-center p-4 md:p-6 overflow-y-auto"
         onClick={onClose}
       >
         <motion.div
@@ -23,7 +26,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ type: "spring", duration: 0.5 }}
-          className="relative w-full max-w-6xl bg-zinc-900 rounded-2xl border border-white/10 my-8"
+          className="relative w-full max-w-[1500px] bg-zinc-900 rounded-2xl border border-white/10 my-4 md:my-8"
           onClick={(e) => e.stopPropagation()}
         >
           <button
@@ -47,13 +50,13 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               </p>
             </div>
 
-            <div className="w-full h-64 md:h-96 mb-12 rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center overflow-hidden relative">
+            <div className="w-full h-64 md:h-[520px] mb-12 rounded-xl bg-black flex items-center justify-center overflow-hidden relative">
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
               {project.image ? (
                 <img
                   src={project.image}
                   alt={project.imageAlt ?? project.title}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-contain"
                 />
               ) : (
                 <div className="text-zinc-700 text-6xl font-bold opacity-20">Prezentare proiect</div>
@@ -65,25 +68,31 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               {project.gallery && (
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-6">Capturi din aplicatie</h3>
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-8">
                     {project.gallery.map((item) => (
-                      <div
+                      <button
+                        type="button"
                         key={item.src}
-                        className="overflow-hidden rounded-xl border border-white/10 bg-white/5"
+                        onClick={() => setExpandedImage(item)}
+                        className="group block w-full overflow-hidden rounded-xl border border-white/10 bg-white/5 text-left transition-colors hover:border-white/25 focus:outline-none focus:ring-2 focus:ring-white/30"
+                        aria-label={`Mareste captura ${item.title}`}
                       >
-                        <div className="aspect-video bg-black overflow-hidden">
+                        <div className="relative bg-black overflow-hidden">
                           <img
                             src={item.src}
                             alt={item.alt}
-                            className="h-full w-full object-contain"
+                            className="block h-auto w-full"
                             loading="lazy"
                           />
+                          <div className="absolute top-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/70 text-white opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100 group-focus:opacity-100">
+                            <ZoomIn className="h-5 w-5" />
+                          </div>
                         </div>
                         <div className="p-5">
                           <h4 className="text-lg font-semibold text-white mb-2">{item.title}</h4>
                           <p className="text-sm leading-relaxed text-zinc-400">{item.description}</p>
                         </div>
-                      </div>
+                      </button>
                     ))}
                   </div>
                 </div>
@@ -154,6 +163,53 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
           </div>
         </motion.div>
+
+        <AnimatePresence>
+          {expandedImage && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4 backdrop-blur-md"
+              onClick={(e) => {
+                e.stopPropagation();
+                setExpandedImage(null);
+              }}
+            >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ duration: 0.2 }}
+                className="relative flex max-h-[94vh] w-full max-w-[1800px] flex-col overflow-hidden rounded-2xl border border-white/15 bg-zinc-950 shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  onClick={() => setExpandedImage(null)}
+                  className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white transition-colors hover:bg-black"
+                  aria-label="Inchide imaginea marita"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+
+                <div className="min-h-0 flex-1 bg-black p-3">
+                  <img
+                    src={expandedImage.src}
+                    alt={expandedImage.alt}
+                    className="mx-auto max-h-[76vh] w-full object-contain"
+                  />
+                </div>
+
+                <div className="border-t border-white/10 p-5 md:p-6">
+                  <h3 className="text-2xl font-bold text-white">{expandedImage.title}</h3>
+                  <p className="mt-2 text-base leading-relaxed text-zinc-300">
+                    {expandedImage.description}
+                  </p>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
     </AnimatePresence>
   );

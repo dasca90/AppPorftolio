@@ -145,23 +145,52 @@ const projects: Project[] = [
     ]
   },
   {
-    id: "scan-clean-disk-analyzer",
-    title: "Scan&Clean Disk Analyzer",
-    summary: "Tool pentru scanarea folderelor si HDD-urilor, identificarea fisierelor mari si analiza spatiului ocupat pe disk.",
-    problem: "Curatarea spatiului de stocare devine lenta atunci cand utilizatorul nu vede rapid ce fisiere, foldere sau zone de pe disk ocupa cel mai mult spatiu.",
-    solution: "Am construit un concept de analizor spatiu disk care scaneaza foldere si HDD-uri, grupeaza rezultatele, evidentiaza fisiere mari si ajuta utilizatorul sa decida ce trebuie curatat sau organizat.",
-    role: "Dezvoltator automatizare Python - am planificat fluxul de scanare, procesarea datelor, gruparea rezultatelor si logica UI.",
+    id: "facturatorul-v1",
+    title: "Facturatorul V1",
+    summary: "Aplicatie desktop pentru generare si evidenta facturi, cu import date din fisiere Word si Excel, calcul automat al orelor facturabile si creare factura PDF.",
+    problem: "Pregatirea facturilor poate consuma timp atunci cand datele de lucru sunt imprastiate in fisiere Word sau Excel, iar orele facturabile trebuie verificate manual inainte de emitere.",
+    solution: "Facturatorul V1 este un tool personal pentru generare si evidenta facturi. Aplicatia importa date din fisiere Word sau Excel, extrage informatii relevante pe baza de keywords, calculeaza orele facturabile si totalurile, apoi genereaza factura intr-un format profesional. Include management clienti, editor vizual pentru layout factura, istoric facturi si export CSV.",
+    role: "Dezvoltator aplicatie desktop - am definit fluxul local-first, importul de date, regulile de calcul, managementul clientilor si generarea facturii PDF.",
     features: [
-      "Scanare foldere si HDD pentru analiza spatiului ocupat",
-      "Detectare fisiere mari si foldere cu volum ridicat",
-      "Rezultate grupate pentru decizii rapide de curatare",
-      "Filtre dupa tip fisier, dimensiune si locatie",
-      "Feedback de progres pentru scanari mai lungi",
-      "Utilitar de productivitate pentru curatare si organizare"
+      "Import date din Word si Excel",
+      "Extragere task-uri, proiecte si ore pe baza de keywords",
+      "Calcul automat ore facturabile si totaluri",
+      "Management clienti si reguli de facturare",
+      "Editor vizual pentru layout factura",
+      "Istoric facturi si export CSV",
+      "Aplicatie desktop local-first"
     ],
-    technologies: ["Python", "Aplicatie desktop", "Scanare fisiere", "Procesare date", "Logica UI"],
-    impact: "Face curatarea spatiului pe disk mai clara prin inlocuirea presupunerilor cu date vizibile despre fisiere, foldere si dimensiuni.",
-    category: "Automatizare productivitate"
+    technologies: ["Tauri", "React", "TypeScript", "Local-first storage", "Word/Excel import", "PDF generation"],
+    impact: "Reduce timpul de pregatire a facturilor si pastreaza un istoric clar pentru clienti, status plata, documente PDF si exporturi CSV.",
+    category: "Automatizare productivitate",
+    image: "/projects/facturator-v1/generare-factura.jpg",
+    imageAlt: "Facturatorul V1 cu editor vizual pentru factura",
+    gallery: [
+      {
+        title: "Clienti",
+        description: "Administrare clienti, contacte si reguli de facturare.",
+        src: "/projects/facturator-v1/clienti.jpg",
+        alt: "Facturatorul V1 - administrare clienti si reguli de facturare"
+      },
+      {
+        title: "Generare factura",
+        description: "Editor factura cu logo, layout, servicii, totaluri si ghidaje de print.",
+        src: "/projects/facturator-v1/generare-factura.jpg",
+        alt: "Facturatorul V1 - editor factura cu layout si totaluri"
+      },
+      {
+        title: "Intrari Word sau Excel",
+        description: "Extragere date din Word/Excel, calcul ore facturabile si pregatire factura.",
+        src: "/projects/facturator-v1/intrari-word-excel.jpg",
+        alt: "Facturatorul V1 - import date din Word si Excel"
+      },
+      {
+        title: "Istoric facturi",
+        description: "Evidenta facturi, status plata, PDF-uri si export CSV.",
+        src: "/projects/facturator-v1/istoric-facturi.jpg",
+        alt: "Facturatorul V1 - istoric facturi si export CSV"
+      }
+    ]
   }
 ];
 

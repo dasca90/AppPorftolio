@@ -47,7 +47,7 @@ const experiences = [
     highlights: [
       "Dezvoltare workflow-uri pentru trading dashboard cu scanner de piata, reguli de decizie si rapoarte",
       "Proiectare workflow de pre-design solar si ofertare pe baza experientei PV",
-      "Dezvoltare concepte de productivitate precum Scan&Clean Disk Analyzer",
+      "Dezvoltare aplicatie desktop local-first pentru generare si evidenta facturi",
       "Folosirea documentatiei, testarii si debugging-ului pentru proiecte mai clare si mentenabile"
     ]
   }
