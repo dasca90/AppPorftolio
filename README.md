@@ -6,7 +6,7 @@ Portofoliu pentru Alexandru Dascalescu, orientat catre roluri de AI Automation s
 
 - AI-assisted development, automatizare workflow-uri, integrare API si procesare de date
 - Proiectare CAD, instalatii MEP, layout-uri electrice, proiectare PV si documentatie tehnica
-- Proiecte principale: Trading Bot Dashboard, Solar Pre-Design & Quotation Platform si Scan&Clean Disk Analyzer
+- Proiecte principale: Aplicatie Crypto Trading, Platforma Pre-proiectare si Ofertare pentru Fotovoltaice si Scan&Clean Disk Analyzer
 
 ## Rulare proiect
 
