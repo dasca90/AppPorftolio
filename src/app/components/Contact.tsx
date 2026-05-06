@@ -52,7 +52,7 @@ export function Contact() {
           </div>
 
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
-            Hai sa discutam workflow-ul
+            Deschis pentru roluri de AI Automation, proiecte practice de automatizare si colaborari in proiectare tehnica.
           </h2>
 
           <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
